@@ -1,3 +1,9 @@
+# revision 23085
+# category TLCore
+# catalog-ctan /language/hungarian/hyphenation
+# catalog-date 2009-09-27 14:03:04 +0200
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-hyphen-hungarian
 Version:	20090927
 Release:	1
@@ -53,6 +59,7 @@ encodings. From https://github.com/nagybence/huhyphn/.
 %doc %{_texmfdir}/doc/generic/huhyphen/hyph_hu.dic
 %doc %{_texmfdir}/doc/generic/huhyphen/searchforerrors.rb
 %doc %{_texmfdir}/doc/generic/huhyphen/testhyphenation.rb
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,6 +70,8 @@ encodings. From https://github.com/nagybence/huhyphn/.
 %install
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-hungarian <<EOF
 %% from hyphen-hungarian:
