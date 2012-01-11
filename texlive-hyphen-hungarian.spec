@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-hyphen-hungarian
 Version:	20090927
-Release:	1
+Release:	2
 Summary:	Hungarian hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hungarian/hyphenation
