@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-hyphen-hungarian
 Version:	20090927
-Release:	2
+Release:	1
 Summary:	Hungarian hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hungarian/hyphenation
@@ -52,14 +52,16 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-hungarian <<EOF
-\%\% from hyphen-hungarian:
+\%% from hyphen-hungarian:
 hungarian loadhyph-hu.tex
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_dat_d}/hyphen-hungarian
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-hungarian <<EOF
-\%\% from hyphen-hungarian:
+\%% from hyphen-hungarian:
 \addlanguage{hungarian}{loadhyph-hu.tex}{}{2}{2}
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_def_d}/hyphen-hungarian
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
 cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-hungarian <<EOF
 -- from hyphen-hungarian:
