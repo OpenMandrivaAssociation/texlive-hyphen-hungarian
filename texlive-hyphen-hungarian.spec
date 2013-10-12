@@ -1,12 +1,12 @@
-# revision 23085
+# revision 29725
 # category TLCore
 # catalog-ctan /language/hungarian/hyphenation
-# catalog-date 2009-09-27 14:03:04 +0200
+# catalog-date 2012-06-19 22:38:05 +0200
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-hyphen-hungarian
-Version:	20090927
-Release:	3
+Version:	20120619
+Release:	1
 Summary:	Hungarian hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hungarian/hyphenation
@@ -36,10 +36,10 @@ encodings. From https://github.com/nagybence/huhyphn/.
 %_texmf_language_dat_d/hyphen-hungarian
 %_texmf_language_def_d/hyphen-hungarian
 %_texmf_language_lua_d/hyphen-hungarian
-%doc %{_texmfdir}/doc/generic/huhyphen/huhyphn.pdf
-%doc %{_texmfdir}/doc/generic/huhyphen/hyph_hu.dic
-%doc %{_texmfdir}/doc/generic/huhyphen/searchforerrors.rb
-%doc %{_texmfdir}/doc/generic/huhyphen/testhyphenation.rb
+%doc %{_texmfdistdir}/doc/generic/huhyphen/huhyphn.pdf
+%doc %{_texmfdistdir}/doc/generic/huhyphen/hyph_hu.dic
+%doc %{_texmfdistdir}/doc/generic/huhyphen/searchforerrors.rb
+%doc %{_texmfdistdir}/doc/generic/huhyphen/testhyphenation.rb
 
 #-----------------------------------------------------------------------
 %prep
@@ -48,8 +48,8 @@ encodings. From https://github.com/nagybence/huhyphn/.
 %build
 
 %install
-mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_texmfdistdir}
+cp -fpar doc %{buildroot}%{_texmfdistdir}
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-hungarian <<EOF
 \%% from hyphen-hungarian:
@@ -74,22 +74,3 @@ cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-hungarian <<EOF
 		hyphenation = '',
 	},
 EOF
-
-
-%changelog
-* Tue Jan 24 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090927-3
-+ Revision: 767556
-- Add workaround to rpm bug that broke hyphenation files
-- Add workaround to rpm bug that broke hyphenation files
-
-* Wed Jan 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090927-2
-+ Revision: 759917
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090927-1
-+ Revision: 718659
-- texlive-hyphen-hungarian
-- texlive-hyphen-hungarian
-- texlive-hyphen-hungarian
-- texlive-hyphen-hungarian
-
