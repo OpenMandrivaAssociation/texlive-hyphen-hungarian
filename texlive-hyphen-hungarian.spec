@@ -1,12 +1,6 @@
-# revision 29725
-# category TLCore
-# catalog-ctan /language/hungarian/hyphenation
-# catalog-date 2012-06-19 22:38:05 +0200
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-hyphen-hungarian
-Version:	20120619
-Release:	9
+Version:	20170414
+Release:	1
 Summary:	Hungarian hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hungarian/hyphenation
@@ -36,10 +30,8 @@ encodings. From https://github.com/nagybence/huhyphn/.
 %_texmf_language_dat_d/hyphen-hungarian
 %_texmf_language_def_d/hyphen-hungarian
 %_texmf_language_lua_d/hyphen-hungarian
-%doc %{_texmfdistdir}/doc/generic/huhyphen/huhyphn.pdf
-%doc %{_texmfdistdir}/doc/generic/huhyphen/hyph_hu.dic
-%doc %{_texmfdistdir}/doc/generic/huhyphen/searchforerrors.rb
-%doc %{_texmfdistdir}/doc/generic/huhyphen/testhyphenation.rb
+%doc %{_texmfdistdir}/doc/generic/huhyphen
+%doc %{_texmfdistdir}/doc/generic/hyph-utf8/hu
 
 #-----------------------------------------------------------------------
 %prep
