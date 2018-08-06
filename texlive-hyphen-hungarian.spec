@@ -1,6 +1,6 @@
 Name:		texlive-hyphen-hungarian
 Version:	20180303
-Release:	1
+Release:	2
 Summary:	Hungarian hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hungarian/hyphenation
@@ -27,6 +27,8 @@ encodings. From https://github.com/nagybence/huhyphn/.
 
 #-----------------------------------------------------------------------
 %files
+%{_texmfdistdir}/tex/generic/hyph-utf8/loadhyph/*
+%{_texmfdistdir}/tex/generic/hyph-utf8/patterns/*/*
 %_texmf_language_dat_d/hyphen-hungarian
 %_texmf_language_def_d/hyphen-hungarian
 %_texmf_language_lua_d/hyphen-hungarian
@@ -40,6 +42,9 @@ encodings. From https://github.com/nagybence/huhyphn/.
 %build
 
 %install
+mkdir -p %{buildroot}%{_texmfdistdir}
+cp -fpar tex %{buildroot}%{_texmfdistdir}
+
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
