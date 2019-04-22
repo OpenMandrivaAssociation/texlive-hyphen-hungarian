@@ -1,6 +1,6 @@
 Name:		texlive-hyphen-hungarian
-Version:	20180303
-Release:	3
+Version:	20181105
+Release:	1
 Summary:	Hungarian hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hungarian/hyphenation
