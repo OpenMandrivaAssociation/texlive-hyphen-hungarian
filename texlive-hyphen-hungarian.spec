@@ -1,5 +1,5 @@
 Name:		texlive-hyphen-hungarian
-Version:	20181105
+Version:	20190406
 Release:	1
 Summary:	Hungarian hyphenation patterns
 Group:		Publishing
