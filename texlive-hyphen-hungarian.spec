@@ -1,12 +1,12 @@
 Name:		texlive-hyphen-hungarian
-Version:	20190406
+Version:	58652
 Release:	1
 Summary:	Hungarian hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hungarian/hyphenation
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-hungarian.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-hungarian.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-hungarian.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-hungarian.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -18,12 +18,12 @@ Hyphenation patterns for Hungarian in T1/EC and UTF-8
 encodings. From https://github.com/nagybence/huhyphn/.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -33,11 +33,11 @@ encodings. From https://github.com/nagybence/huhyphn/.
 %_texmf_language_def_d/hyphen-hungarian
 %_texmf_language_lua_d/hyphen-hungarian
 %doc %{_texmfdistdir}/doc/generic/huhyphen
-%doc %{_texmfdistdir}/doc/generic/hyph-utf8/hu
+%doc %{_texmfdistdir}/doc/generic/hyph-utf8/languages/hu
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
