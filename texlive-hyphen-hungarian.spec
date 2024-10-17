@@ -3,7 +3,7 @@ Version:	58652
 Release:	2
 Summary:	Hungarian hyphenation patterns
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/hungarian/hyphenation
+URL:		https://www.ctan.org/tex-archive/language/hungarian/hyphenation
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-hungarian.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-hungarian.doc.r%{version}.tar.xz
