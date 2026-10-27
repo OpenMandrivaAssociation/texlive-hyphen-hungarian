@@ -3,7 +3,7 @@
 
 Name:		texlive-%{tl_name}
 Version:	%{tl_revision}
-Release:	1
+Release:	2
 Summary:	Hungarian hyphenation patterns.
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/language/hungarian/hyphenation
